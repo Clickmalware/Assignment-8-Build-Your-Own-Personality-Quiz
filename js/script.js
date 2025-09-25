@@ -6,7 +6,6 @@ let totalPoints = 0;
 
 buttons.forEach(function(button){
     button.addEventListener("click", function() {
-   //select the parent element of the clicked button
     let parent = button.parentElement;
 
     // DESELECT ALL BUTTONS IN THE SAME QUESTION
@@ -20,7 +19,7 @@ buttons.forEach(function(button){
     button.classList.remove("btn-outline-primary");
     button.classList.add("btn-primary");
 
-    // RECORD THE selected ANSWER
+    // RECORD THE SELECTED ANSWER
     let answer = button.getAttribute("data-answer");
     let question = parent.getAttribute("data-question");
     console.log("Question: " + question + ", Answer: " + answer);
@@ -53,11 +52,10 @@ buttons.forEach(function(button){
 
 })
 
-   // On click of the submit button with id "show-result", display a result based on the sum of all question points stored in localStorage
+   // On submit button click, calculate total points and show result
     let submitButton = document.getElementById("show-result");
     submitButton.addEventListener("click", function() {
-      // Recalculate totalPoints by summing all question points from localStorage
-      totalPoints = points; // Reset totalPoints before recalculating
+      totalPoints = points; 
       console.log("Total Points on submit: " + totalPoints);
     
       let resultText = "";
