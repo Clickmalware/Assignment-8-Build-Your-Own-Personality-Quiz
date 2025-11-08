@@ -77,3 +77,4 @@ buttons.forEach(function(button){
       document.getElementById("result-text").innerText = resultText;
       console.log("Result displayed: " + resultText);
     });
+
